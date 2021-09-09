@@ -1,10 +1,12 @@
+import { PancakeHouseMenuIterator } from './PancakeHouseMenuIterator';
 import { MenuItem } from './MenuItem';
+
 export class PancakeHouseMenu {
 
-    menuItems: MenuItem[];
+    menuItems: MenuItem[] = [];
 
-    constructor(arrayList: []) {
-        this.menuItems = arrayList;
+    constructor() {
+        // this.menuItems = arrayList;
 
         this.addItem("K&B’s Pancake Breakfast", "Pancakes with scrambled eggs, and toast", true, 2.99);
         this.addItem("Regular Pancake Breakfast", "Pancakes with fried eggs, sausage" ,false, 2.99);
@@ -19,10 +21,24 @@ export class PancakeHouseMenu {
         this.menuItems.push(menuItem);
     }
 
-    getMenuItems() {
-        return this.menuItems;
+    createIterator() {
+        return new PancakeHouseMenuIterator(this.menuItems)
     }
+
+    // getMenuItems() {
+    //     return this.menuItems;
+    // }
 
 
 
 }
+
+// let pancakeHouseMenu = new PancakeHouseMenu();
+// let breakfastItems = pancakeHouseMenu.createIterator();
+
+// for (let i = 0; i < breakfastItems.length; i++) {
+//     const menuItem = breakfastItems[i];    
+//     console.log(menuItem.getName() + " ");
+//     console.log(menuItem.getPrice() + " ");
+//     console.log(menuItem.getDescription());
+// }

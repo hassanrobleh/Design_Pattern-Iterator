@@ -28,3 +28,4 @@ export class MenuItem {
         return this.vegetarian;
     }
 }
+

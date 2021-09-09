@@ -4,14 +4,24 @@ import { PancakeHouseMenu } from './PancakeHouseMenu';
 
 export class MenutestDrive {
 
-    main() {
+    diner() {
+        let pancakeHouseMenu = new PancakeHouseMenu();
+        let dinerMenu = new DinerMenu();
+        let waitress = new Waitress(pancakeHouseMenu, dinerMenu);
+
+        return waitress.printMenuDinerIterator();
+    }
+
+    pancake() {
+
         let pancakeHouseMenu = new PancakeHouseMenu();
         let dinerMenu = new DinerMenu();
         let waitress = new Waitress(pancakeHouseMenu, dinerMenu);
 
         return waitress.printMenuPancakeIterator();
+
     }
 }
 
-// let app = new MenutestDrive()
-// app.main();
+// let app = new MenutestDrive();
+// console.log(app.main());

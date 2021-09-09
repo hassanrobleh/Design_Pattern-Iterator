@@ -11,18 +11,18 @@ export class DinerMenuIterator implements Iterator {
 
     }
 
-    hasNext() {
-        if(this.position >= this.items.length || this.items[this.position] == null) {
+    next(): object {
+        let menuItem: MenuItem = this.items[this.position];
+        this.position = this.position + 1;
+        return menuItem;
+    }
+
+    hasNext(): boolean {
+        if(this.position >= this.items.length || this.items[this.position] === null) {
             return false;
         } else {
             return true;
         }
-    }
-
-    next(): object {
-        let menuItem = this.items[this.position];
-        this.position = this.position + 1;
-        return menuItem;
     }
 
 }

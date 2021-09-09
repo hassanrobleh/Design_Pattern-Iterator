@@ -9,7 +9,13 @@ export class PancakeHouseMenuIterator implements Iterator {
         this.items = items;
     }
 
-    hasNext() {
+    next(): object {
+        let menuItem: MenuItem = this.items[this.position];
+        this.position = this.position + 1;
+        return menuItem;
+    }
+
+    hasNext(): boolean {
         if(this.position >= this.items.length || this.items[this.position] == null) {
             return false;
         } else {
@@ -17,10 +23,6 @@ export class PancakeHouseMenuIterator implements Iterator {
         }
     }
 
-    next(): object {
-        let menuItem = this.items[this.position];
-        this.position = this.position + 1;
-        return menuItem;
-    }
+    
 
 }

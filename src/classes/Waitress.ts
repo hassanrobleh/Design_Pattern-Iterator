@@ -13,7 +13,7 @@ export class Waitress {
     }
 
     public printMenuPancakeIterator() {
-        let pancakeIterator: Iterator = this.pancakeHouseMenu.createIterator();
+        let pancakeIterator = this.pancakeHouseMenu.createIterator();
         return this.printMenus(pancakeIterator);
     }
 
@@ -23,15 +23,16 @@ export class Waitress {
     }
 
     private printMenus(iterator: Iterator) {
+        let result = "";
         while(iterator.hasNext()) {
-            let menuItem: MenuItem  = <MenuItem> iterator.next();
-            return `
-                ${menuItem.getName()} ${menuItem.getPrice()} ${menuItem.getDescription()}
-            `
-            // console.log(menuItem.getName() + " ");
-            // console.log(menuItem.getPrice() + " ");
-            // console.log(menuItem.getDescription());
+            let menuItem  = <MenuItem> iterator.next();
+            
+            result += menuItem.getName() + " ";
+            result += menuItem.getPrice()+ " ";
+            result += menuItem.getDescription();
+
         }
+        return result;
     }
 
 }

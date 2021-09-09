@@ -12,23 +12,25 @@ export class Waitress {
         this.dinerMenu = diner;
     }
 
-    public printMenu() {
+    public printMenuPancakeIterator() {
         let pancakeIterator: Iterator = this.pancakeHouseMenu.createIterator();
+        return this.printMenus(pancakeIterator);
+    }
+
+    public printMenuDinerIterator() {
         let dinerIterator: Iterator = this.dinerMenu.createIterator();
-
-        console.log("MENU\n----\nBREAKFAST");
-        this.printMenus(pancakeIterator);
-
-        console.log("\nLUNCH")
-        this.printMenus(dinerIterator);
+        return this.printMenus(dinerIterator);
     }
 
     private printMenus(iterator: Iterator) {
         while(iterator.hasNext()) {
             let menuItem: MenuItem  = <MenuItem> iterator.next();
-            console.log(menuItem.getName() + " ");
-            console.log(menuItem.getPrice() + " ");
-            console.log(menuItem.getDescription());
+            return `
+                ${menuItem.getName()} ${menuItem.getPrice()} ${menuItem.getDescription()}
+            `
+            // console.log(menuItem.getName() + " ");
+            // console.log(menuItem.getPrice() + " ");
+            // console.log(menuItem.getDescription());
         }
     }
 

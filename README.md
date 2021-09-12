@@ -7,7 +7,7 @@ représentation interne (liste, pile, arbre, etc.).
 # Getting Started
 ```bash
 $ git clone https://github.com/hassanrobleh/Design_Pattern-Iterator.git
-$ cd Design-Pattern-Decorator
+$ cd Design_Pattern-Iterator
 $ npm install
 $ npm run test
 ```

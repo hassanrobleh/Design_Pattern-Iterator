@@ -1,14 +1,15 @@
+import { Menu } from './../interfaces/Menu';
 import { MenuItem } from './MenuItem';
 import { Iterator } from './../interfaces/Iterator';
 import { DinerMenu } from './DinerMenu';
 import { PancakeHouseMenu } from './PancakeHouseMenu';
 export class Waitress {
 
-    pancakeHouseMenu: PancakeHouseMenu;
-    dinerMenu: DinerMenu;
+    pancakeHouseMenu: Menu;
+    dinerMenu: Menu;
 
-    constructor(pan: PancakeHouseMenu, diner: DinerMenu) {
-        this.pancakeHouseMenu = pan;
+    constructor(pancake: Menu, diner: Menu) {
+        this.pancakeHouseMenu = pancake;
         this.dinerMenu = diner;
     }
 

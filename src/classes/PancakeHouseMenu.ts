@@ -1,7 +1,8 @@
+import { Menu } from './../interfaces/Menu';
 import { PancakeHouseMenuIterator } from './PancakeHouseMenuIterator';
 import { MenuItem } from './MenuItem';
 
-export class PancakeHouseMenu {
+export class PancakeHouseMenu implements Menu {
 
     menuItems: MenuItem[] = [];
 

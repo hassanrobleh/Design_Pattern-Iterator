@@ -1,8 +1,9 @@
+import { Menu } from './../interfaces/Menu';
 import { Iterator } from './../interfaces/Iterator';
 import { DinerMenuIterator } from './DinerMenuIterator';
 import { MenuItem } from './MenuItem';
 
-export class DinerMenu {
+export class DinerMenu implements Menu {
 
     static readonly MAX_ITEMS: number = 6;
     numberOfItems: number = 0;

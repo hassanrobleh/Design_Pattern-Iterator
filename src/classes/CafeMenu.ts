@@ -5,7 +5,7 @@ import { MenuItem } from './MenuItem';
 
 export class CafeMenu implements Menu {
 
-    menuItems: Object[] = [];
+    menuItems: MenuItem[] = [];
 
     constructor() {
         this.addItem("Veggie Burger and Air Fries", "Veggie burger on a whole wheat bun, lettuce, tomato and fries", true, 3.99);
@@ -16,7 +16,7 @@ export class CafeMenu implements Menu {
     addItem(name: string, description: string, vegetarian: boolean, price: number) {
 
         let menuItem: MenuItem = new MenuItem(name, description, vegetarian, price);
-        this.menuItems.push(menuItem.getName(), menuItem);
+        this.menuItems.push(menuItem);
     }
 
     createIterator(): Iterator {

@@ -7,10 +7,12 @@ export class Waitress {
 
     pancakeHouseMenu: Menu;
     dinerMenu: Menu;
+    cafeMenu: Menu
 
-    constructor(pancake: Menu, diner: Menu) {
+    constructor(pancake: Menu, diner: Menu, cafe: Menu) {
         this.pancakeHouseMenu = pancake;
         this.dinerMenu = diner;
+        this.cafeMenu = cafe
     }
 
     public printMenuPancakeIterator() {
@@ -21,6 +23,11 @@ export class Waitress {
     public printMenuDinerIterator() {
         let dinerIterator: Iterator = this.dinerMenu.createIterator();
         return this.printMenus(dinerIterator);
+    }
+
+    public printMenuCafeIterator() {
+        let cafeIterator: Iterator = this.cafeMenu.createIterator();
+        return this.printMenus(cafeIterator);
     }
 
     private printMenus(iterator: Iterator) {

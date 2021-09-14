@@ -4,16 +4,16 @@ import { MenuItem } from './MenuItem';
 
 export class CafeMenuIterator implements Iterator {
 
-    items: Object[];
+    items: MenuItem[];
     position: number = 0;
 
-    constructor(items: Object[] ) {
+    constructor(items: MenuItem[] ) {
         this.items = items;
 
     }
 
     next(): object {
-        let menuItem: Object = this.items[this.position];
+        let menuItem: MenuItem = this.items[this.position];
         this.position = this.position + 1;
         return menuItem;
     }

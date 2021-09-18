@@ -1,4 +1,4 @@
-import { CafeMenu } from './CafeMenu';
+import { CafeMenu } from './menu/CafeMenu';
 import { Waitress } from './Waitress';
 import { DinerMenu } from './DinerMenu';
 import { PancakeHouseMenu } from './PancakeHouseMenu';

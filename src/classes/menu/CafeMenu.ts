@@ -1,7 +1,7 @@
-import { CafeMenuIterator } from './CafeMenuIterator';
-import { Iterator } from './../interfaces/Iterator';
-import { Menu } from './../interfaces/Menu';
-import { MenuItem } from './MenuItem';
+import { CafeMenuIterator } from '../iterator/CafeMenuIterator';
+import { Iterator } from '../../interfaces/Iterator';
+import { Menu } from '../../interfaces/Menu';
+import { MenuItem } from '../MenuItem';
 
 export class CafeMenu implements Menu {
 
@@ -18,6 +18,10 @@ export class CafeMenu implements Menu {
         let menuItem: MenuItem = new MenuItem(name, description, vegetarian, price);
         this.menuItems.push(menuItem);
     }
+
+    // createIterator(): Iterator {
+    //     return new CafeMenuIterator(this.menuItems);
+    // }
 
     createIterator(): Iterator {
         return new CafeMenuIterator(this.menuItems);

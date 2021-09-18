@@ -1,8 +1,6 @@
 import { Menu } from './../interfaces/Menu';
 import { MenuItem } from './MenuItem';
 import { Iterator } from './../interfaces/Iterator';
-import { DinerMenu } from './DinerMenu';
-import { PancakeHouseMenu } from './PancakeHouseMenu';
 export class Waitress {
 
     pancakeHouseMenu: Menu;
@@ -29,6 +27,8 @@ export class Waitress {
         let cafeIterator: Iterator = this.cafeMenu.createIterator();
         return this.printMenus(cafeIterator);
     }
+
+
 
     private printMenus(iterator: Iterator) {
         let result = "";

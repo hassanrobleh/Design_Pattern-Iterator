@@ -1,6 +1,5 @@
-import { Iterator } from '../interfaces/Iterator';
-import { Menu } from '../interfaces/Menu';
-import { MenuItem } from './MenuItem';
+import { Iterator } from '../../interfaces/Iterator';
+import { MenuItem } from '../MenuItem';
 
 export class CafeMenuIterator implements Iterator {
 

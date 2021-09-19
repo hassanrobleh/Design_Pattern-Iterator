@@ -8,7 +8,6 @@ export class CafeMenuIterator implements Iterator {
 
     constructor(items: MenuItem[] ) {
         this.items = items;
-
     }
     
     hasNext(): boolean {
@@ -24,5 +23,4 @@ export class CafeMenuIterator implements Iterator {
         this.position = this.position + 1;
         return menuItem;
     }
-
 }

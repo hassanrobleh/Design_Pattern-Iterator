@@ -8,6 +8,6 @@ représentation interne (liste, pile, arbre, etc.).
 ```bash
 $ git clone https://github.com/hassanrobleh/Design_Pattern-Iterator.git
 $ cd Design_Pattern-Iterator
-$ npm install
+$ npm 
 $ npm run test
 ```

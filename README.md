@@ -6,8 +6,8 @@ représentation interne (liste, pile, arbre, etc.).
 
 # Getting Started
 ```bash
-$ git clone https://github.com/hassanrobleh/Design_Pattern-Iterator.git
-$ cd Design_Pattern-Iterator
+$ git clone https://github.com/hassanrobleh/Architecture-Hexagonale.git
+$ cd Architecture-Hexagonale
 $ npm installe
-$ npm run test
+$ npm run dev-typeorm
 ```

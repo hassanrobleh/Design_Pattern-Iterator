@@ -8,6 +8,6 @@ représentation interne (liste, pile, arbre, etc.).
 ```bash
 $ git clone https://github.com/hassanrobleh/Architecture-Hexagonale.git
 $ cd Architecture-Hexagonale
-$ npm installee
+$ npm install
 $ npm run dev-typeorm
 ```
